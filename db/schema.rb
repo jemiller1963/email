@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_10_225213) do
+ActiveRecord::Schema.define(version: 2020_07_24_030728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,9 @@ ActiveRecord::Schema.define(version: 2020_07_10_225213) do
     t.boolean "admin", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "notify_when_added_to_project", default: true
+    t.boolean "notify_when_task_created", default: true
+    t.boolean "notify_when_task_completed", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

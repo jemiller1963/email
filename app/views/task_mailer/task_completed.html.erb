@@ -1,0 +1,11 @@
+<p>
+  Hi <%= @user.name %>,
+</p>
+
+<p>
+  <%= @auther.name %> || <%= @author.username %> added you to a new project called 
+  <%= link_to @project.title, project_url(@project) %>.
+</p>
+<p>
+  <%= link_to 'View the project', project_url(@project), target: :_blank %>
+</p>
